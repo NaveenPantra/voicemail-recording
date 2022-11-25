@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <script
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      type="module"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./scrubber.js"></script>
+    <link href="./style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <div class="container">
+      <section class="modal active">
+        <div class="header">
+          <h1>Record New Voicemail</h1>
+          <button class="btn cancel">X</button>
+        </div>
+        <form action="javascript:void(0);" class="body">
+          <label for="recordingName">Recording name?</label>
+          <input
+            id="recordingName"
+            name="recordingName"
+            spellcheck="false"
+            type="text"
+            value="Naveen's Recording"
+          />
+          <div class="recording-container">
+            <div class="timer"><span>00:00</span>/02:00</div>
+            <div class="waveform">
+              <div class="back-waveform"></div>
+              <div class="front-waveform" style="--dx: 0%"></div>
+              <div class="scrubber"></div>
+            </div>
+          </div>
+          <div class="footer">
+            <button class="resume_pause">
+              <ion-icon name="pause-circle"></ion-icon>
+            </button>
+            <button class="record_btn"></button>
+            <button class="reset">
+              <ion-icon name="refresh-circle"></ion-icon>
+            </button>
+            <button class="btn save">Save</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
